@@ -12,17 +12,23 @@ formSearch.addEventListener('submit', (e) => {
         }) 
 })
 
-function createElement(){
+function createElement(codeCommune, codePostal, commune){
     const divContainer = document.createElement('div')
     divContainer.classList.add('divContainer')
     
     const codePostalItem = document.createElement('p')
     codePostalItem.classList.add('codePostalItem')
+    codePostalItem.textContent = codePostal
     
-    const codeCommunelItem = document.createElement('p')
-    codeCommunelItem.classList.add('codeCommunelItem')
+    const codeCommuneItem = document.createElement('p')
+    codeCommuneItem.classList.add('codeCommunelItem')
+    codeCommuneItem.textContent = codeCommune
     
+    const communelItem = document.createElement('p')
+    communelItem.classList.add('communelItem')
+    communelItem.textContent = commune
     
+    divContainer.append(codePostalItem, codeCommuneItem, communelItem)
 }
 
 
