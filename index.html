@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Rechercher votre ville</h1>
+    <h1 class="title">Rechercher votre ville</h1>
 
-    <form>
+    <form class="formCP">
         <label for="searchCP">Renseignez votre code postal</label>
         <input type="search" name="searchCP" id="searchCP" minlength="5">
         <button type="submit">Rechercher</button>
     </form>
-    <p class="information-city"></p>
-    <div class="description-ville"></div>
+    <p class="information-town"></p>
+    <div class="description-town">
+        <div class="description-item-town">
+            <p>Ville</p>
+            <p>Code postal</p>
+            <p>Code INSEE</p>
+        </div>
+    </div>
 <script src="JS/index.js"></script>
 </body>
 </html>

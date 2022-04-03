@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap');
+body{
+    background-color: #CDEEEC;
+    max-width: 1400px;
+    margin: auto;
+}
+.title{
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3em;
+    margin: 50px 0;
+}
+
+.formCP{
+    
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding: 30px;
+    background: rgba( 255, 255, 255, 0.6 );
+    box-shadow: 0 8px 8px 0 rgba(105, 106, 131, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );    
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    label{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.5em;
+    }
+    #searchCP{
+        width: 80%;
+        height: 60px;
+        border: 1px solid #3C6B68;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    button{
+        width: 80%;
+        border-radius: 15px;
+        padding: 15px 0;
+        border: none;
+        background-color: #3C6B68;
+        color: #FFF;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.5em;
+        transition: all 0.3s ease;
+    }
+    button:hover{
+        background-color: #67B8B2;
+    }
+}
+
+.information-town{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0 ;
+}
+
+.description-item-town, .divContainer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba( 255, 255, 255, 0.6 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );    
+    border-radius: 10px;
+    margin: 10px 0;
+
+    p{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+        width: 30%;
+    }
+}

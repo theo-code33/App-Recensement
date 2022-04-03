@@ -1,8 +1,7 @@
-const descriptionTown = document.querySelector('.description-ville')
+const descriptionTown = document.querySelector('.description-town')
 const formSearch = document.querySelector('form')
 const searchCP = document.querySelector('#searchCP')
-const informationCity = document.querySelector('.information-city')
-console.log(informationCity);
+const informationTown = document.querySelector('.information-town')
 let codePostal
 let statusCodePostal
 formSearch.addEventListener('submit', (e) => {
@@ -12,7 +11,6 @@ formSearch.addEventListener('submit', (e) => {
         descriptionTown.removeChild(item)
     });
     codePostal = parseInt(searchCP.value)
-    console.log(codePostal)
     let codePostalString = String(codePostal)
 
     if(codePostalString.length == 5){
@@ -20,14 +18,11 @@ formSearch.addEventListener('submit', (e) => {
         .then(response => response.json())
         .then(data => {
             statusCodePostal = data.happyApiStatus
-            console.log(statusCodePostal);
             if(statusCodePostal == '200 OK'){
                 fetch("https://apicarto.ign.fr/api/codes-postaux/communes/" + codePostalString)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
-                    console.log('commune 1 : ', data[0]);
-                    informationCity.textContent = 'Code postal trouvé'
+                    informationTown.textContent = 'Voici les villes trouvé'
                     data.forEach( item => {
                         let town = item.libelleAcheminement
                         let codeTown = item.codeCommune
@@ -37,11 +32,11 @@ formSearch.addEventListener('submit', (e) => {
                 })
             
             }else if(statusCodePostal == '404 Not Found'){
-                informationCity.textContent = 'Code postal inconnu'
+                informationTown.textContent = 'Code postal inconnu'
             }
         })
     }else{
-        informationCity.textContent = 'Aucun code postal renseigné'
+        informationTown.textContent = 'Aucun code postal renseigné'
     }
 })
 
