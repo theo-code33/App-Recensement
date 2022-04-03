@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Hello APP Recensement</h1>
+    <h1>Recensement de votre ville</h1>
 
     <form>
-        <input type="search" name="searchCP" id="searchCP">
+        <label for="searchCP">Renseignez votre code postal</label>
+        <input type="search" name="searchCP" id="searchCP" minlength="5">
+        <button type="submit">Rechercher</button>
     </form>
+    <p class="information-city"></p>
 <script src="JS/index.js"></script>
 </body>
 </html>
